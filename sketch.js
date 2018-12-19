@@ -6,20 +6,35 @@ var redTile;
 var greenTile;
 var blueTile;
 var yellowTile;
+var playerTurn;
+
+var sequence;
 
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(350, 350);
 	
 	redTile = new Tile(50,50,100,color(255,0,0));
 	greenTile = new Tile(200,50,100,color(0,255,0));
 	blueTile = new Tile(50,200,100,color(0,0,255));
 	yellowTile = new Tile(200,200,100,color(255,255,0));
 	
+	playerTurn = false;
+	
+	sequence = [];
+	
 }
 
 function draw() {
   background(220);
 	drawBoard();
+	
+	if(!playerTurn) {
+		playSequence();
+		playerTurn = true;
+	}
+	
+	//if player turn handle input and wait for time out or complete sequence
+	// set player turn false
 }
 
 function drawBoard() {

@@ -46,7 +46,7 @@ function drawBoard() {
 
 function mouseClicked() {
 	// get mouse location and determine which tile was clicked
-	var boxNbr = getClickedTile(mouseX, mouseY);
+	var tileNbr = getClickedTile(mouseX, mouseY);
 }
 
 function getClickedTile(mX,mY) {
